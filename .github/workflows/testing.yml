@@ -1,0 +1,15 @@
+name: This is to test pipeline
+
+on:
+  push:
+    branches:
+      - main
+    pull_requests:
+      - main
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - name: Sometesting
+        run: echo "hello"
